@@ -1,0 +1,29 @@
+.clients {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clients__link {
+    display: flex;
+    @extend %justalign;
+    border: 1px solid $icon-nohover-color;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+
+    fill: $icon-nohover-color;
+
+    transition: fill $cubic, border $cubic;
+
+    &:hover,
+        &:focus {
+            overline: none;
+            border: 1px solid $accent-color;
+            fill: $accent-color;
+        }
+}
+
+.clients__item:not(:last-child) {
+    margin-right: 30px;
+}

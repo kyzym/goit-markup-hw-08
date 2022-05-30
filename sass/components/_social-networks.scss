@@ -1,0 +1,29 @@
+.social-networks {
+    display: flex;
+    width: 206px;
+    height: 44px;
+}
+
+.social-networks__list:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-networks__link {
+    display: flex;
+
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    fill: $icon-nohover-color;
+    @extend %justalign;
+
+    transition: fill  $cubic, background-color $cubic;
+    
+&:hover,
+    &:focus {
+        background-color: $accent-color;
+        fill: $hero-color;
+    }
+    
+}
+

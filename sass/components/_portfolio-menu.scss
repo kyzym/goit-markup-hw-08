@@ -1,0 +1,41 @@
+.card-set__card-subtitle {
+    color: $sub-text-color;
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+.portfolio__menu {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.portfolio__item:not(:last-child) {
+    margin-right: 9px;
+}
+
+.portfolio__button {
+    color: $title-color;
+    background-color: $sub-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+
+    padding: 6px 22px;
+    border-radius: 4px;
+
+    transition: color $cubic, background-color $cubic,
+        box-shadow $cubic;
+
+        &:hover,
+            &:focus {
+                color: $hero-color;
+                background-color: $accent-color;
+                box-shadow: $btn-filter-shadow;
+            }
+}
+
