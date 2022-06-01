@@ -32,8 +32,13 @@ img {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include deskmin1200{
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
 }
 
 ul,
@@ -46,17 +51,45 @@ input {
     padding: 0;
     margin: 0;
 }
-
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-}
-
 $cubic: 250ms $cubic-transm;
 
-%justalign  {
+
+
+%justalign {
     justify-content: center;
     align-items: center;
 }
+
+.container {
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    @include telmin480 {
+        width: 480px;
+        
+    }
+   
+    @include tabmin768{
+        width: 768px;
+       
+    }
+    
+    @include deskmin1200{
+            width: 1200px;
+    
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+

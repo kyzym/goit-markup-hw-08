@@ -1,24 +1,61 @@
-.our-peoples {
-    display: flex;
+.our-command {
+    background-color: $sub-color;
 }
+
+.our-peoples {
+    @include tab768_1199 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -30px;
+            margin-left: -30px;
+        }
+    @include deskmin1200{
+            display: flex;
+        }
+}
+
 
 .our-peoples__item {
     text-align: center;
     box-shadow: $card-people-shadow;
     border-radius: 0px 0px 4px 4px;
     background-color: $hero-color;
-    &:not(:last-child) {
-            margin-right: 30px;
-        }
-   
-}
 
-.our-command {
-    background-color: $sub-color;
+    @include tel480_767 {
+        &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+          
+    }
+    @include tab768_1199 {
+        flex-basis: calc(100% / 2 - 30px);
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    @include deskmin1200{
+        &:not(:last-child) {
+                margin-right: 30px;
+            }
+    }
 }
 
 .command-member {
-    padding: 30px 32px;
+    @include tabmax767 {
+        padding-left: 122px;
+        padding-right: 122px;
+        padding-top: 30px;
+        padding-bottom: 24px;
+    }
+    @include tab768_1199 {
+        padding-left: 74px;
+        padding-right: 74px;
+        padding-top: 30px;
+        padding-bottom: 24px;
+    }
+    @include deskmin1200{
+        padding: 30px 32px;
+    }
+    
 }
 
 .command-member__name {
@@ -35,3 +72,4 @@
     line-height: 1.19;
     margin-bottom: 16px;
 }
+

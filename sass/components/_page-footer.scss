@@ -1,12 +1,72 @@
-.logo--white {
-    padding: 0;
-    margin-bottom: 20px;
-}
-
 .page-footer {
     background-color: $bg-color;
     padding-top: 60px;
     padding-bottom: 60px;
+    
+}
+
+.page-footer__container    {
+  @include tab768_1199 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+  @include deskmin1200 {
+      display: flex;
+      justify-content: space-between;
+      
+  }
+    
+}
+
+.page-footer__adr-container  {
+   @include flex_col_cen
+   margin-bottom: 60px;
+
+   @include deskmin1200 {
+    align-items: baseline;
+    margin-bottom: 0;
+       
+   }
+   
+}
+
+.page-footer__contacts {
+    @include flex_col_cen
+    @include deskmin1200 {
+            align-items: baseline;
+    
+        }
+}
+
+
+.subscription-form {
+    @include flex_col_cen
+    @include deskmin1200 {
+            align-items: baseline;
+            flex-direction: row;
+        }
+}
+
+.add-please {
+    @include flex_col_cen
+    
+    margin-bottom: 60px;
+    @include deskmin1200 {
+        align-items: baseline;
+        margin-bottom: 0;
+    }
+}
+
+.logo--white {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    
+    @include deskmin1200 {
+        font-size: 26px;
+    }
 }
 
 .page-footer__adr {
@@ -14,8 +74,20 @@
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
+    margin-bottom: 8px;
+    
+    @include deskmin1200 {
+      margin-bottom: 9px;
+    }
+    
+}
 
-    margin-bottom: 9px;
+.page-footer__item {
+    margin-bottom: 8px;
+
+    @include deskmin1200 {
+        margin-bottom: 9px;
+    }
 }
 
 .page-footer__link {
@@ -24,54 +96,37 @@
     line-height: 1.71;
     font-style: normal;
     transition: color $cubic;
-   
-    &:hover,
-        &:focus {
-            color: $accent-color;
-        }
-}
+    display: block;
 
-.page-footer__item {
-    margin-bottom: 9px;
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+    
 }
 
 .slogan {
     color: $hero-color;
-    display: inline-block;
+    display: flex;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 20px;
-}
-
-.page-footer__contacts {
-    display: inline-block;
-}
-
-.add-please {
-    flex-direction: column;
-    margin-right: auto;
-}
-
-.page-footer__container {
-    display: flex;
-    align-items: baseline;
-    
-}
-
-.page-footer__adr-container {
-    width: 231px;
-    margin-right: 70px;
+    justify-content: center;
+    @include deskmin1200 {
+        justify-content: start;
+    }
 }
 
 .social-networks__link--black-theme {
     background-color: $icon-foot-color;
     fill: $hero-color;
+
     &:hover,
-        &:focus {
-            background-color: $accent-color;
-        }
+    &:focus {
+        background-color: $accent-color;
+    }
 }
 
 .button--alignment {
@@ -85,8 +140,20 @@
 }
 
 .subscription-form__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
+    margin-bottom: 20px;
+    @include tab768_1199 {
+        width: 450px;
+    }
+
+    @include deskmin1200 {
+    width: 358px;
+    margin-right: 12px;
+    
+    }
+
+
 
     color: $hero-color;
     border: 1px solid $subscr-input-border;
@@ -97,24 +164,22 @@
     padding: 15px 16px;
 
     letter-spacing: 0.03em;
-    margin-right: 12px;
+    // margin-right: 12px;
     box-shadow: $foot-sabscr-shadow;
 
     transition: border-color $cubic, box-shadow $cubic;
 
     &:hover,
-        &:focus {
-            outline: 0;
-            border-color: $accent-color;
-        }
+    &:focus {
+        outline: 0;
+        border-color: $accent-color;
+    }
+
     &::placeholder {
-         font-size: 16px;
-         line-height: 1.25;
+        font-size: 16px;
+        line-height: 1.25;
         letter-spacing: 0.03em;
         color: $foot-sub-color;
-        }
+    }
 }
 
-.subscription-form {
-    display: flex;
-}
