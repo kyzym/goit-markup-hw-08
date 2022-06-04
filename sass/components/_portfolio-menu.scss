@@ -1,18 +1,39 @@
-.card-set__card-subtitle {
-  color: $sub-text-color;
-  font-size: 16px;
-  line-height: 1.88;
-}
-
 .portfolio__menu {
   display: flex;
-  justify-content: center;
-
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px;
+  @include tabmin768 {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @include deskmin1200 {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
+.portfolio__item {
+  @include tel480_767 {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+    &:nth-child(1) {
+      margin-bottom: 15px;
+    }
+  }
 
-.portfolio__item:not(:last-child) {
-  margin-right: 9px;
+  @include tabmin768 {
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  @include deskmin1200 {
+    margin-right: 9px;
+  }
 }
 
 .portfolio__button {

@@ -2,12 +2,19 @@
   color: $logo-color;
   font-family: $logo-font;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
 
   display: block;
-  padding-top: 25px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  @include tabmin768 {
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
+  @include deskmin1200 {
+    font-size: 26px;
+  }
 }
 
 .logo__accent {
