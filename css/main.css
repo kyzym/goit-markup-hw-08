@@ -103,6 +103,7 @@ input {
 @media screen and (min-width: 768px) {
   .header-container {
     border-bottom: 1px solid #ececec;
+    position: relative;
   }
 }
 
@@ -235,12 +236,13 @@ input {
   }
 }
 
-.site-nav .active {
+.site-nav__link.active {
+  position: relative;
   color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
-  .site-nav .active::after {
+  .site-nav__link.active::after {
     position: absolute;
     bottom: -1px;
     left: 0px;
