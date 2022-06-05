@@ -1,4 +1,8 @@
 .mobile-networks {
+  @include tabmin768 {
+    display: none;
+  }
+
   display: flex;
 
   &__link {

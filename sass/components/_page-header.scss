@@ -1,8 +1,11 @@
 .header-container {
-  // position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include tabmin768 {
+    border-bottom: 1px solid $foot-border-color;
+  }
 }
 
 .menu-button {
@@ -16,7 +19,7 @@
   padding: 10px;
   border: none;
   background-color: transparent;
-  z-index: 300;
+  z-index: 100;
 
   & .icon-close {
     display: none;
@@ -31,65 +34,81 @@
     display: none;
   }
 
-  &:active {
+  &:hover,
+  &:focus {
     fill: $accent-color;
   }
 }
 
 .menu-container {
-  padding: 48px;
-  display: none;
-
-  &.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  @include tabmin768 {
+    align-items: center;
   }
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: $hero-color;
+  @include tabmax767 {
+    display: none;
+    padding: 48px;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $hero-color;
+  }
 }
 
-body {
-  position: relative;
-}
+// body {
+//   position: relative;
+// }
 
 .site-nav {
-  & :not(:last-child) {
-    margin-bottom: 32px;
+  @include tab768_1199 {
+    display: flex;
+    margin-right: 84px;
+  }
+
+  &__list:not(:last-child) {
+    @include tabmin768 {
+      margin-right: 50px;
+    }
+    @include tabmax767 {
+      margin-bottom: 32px;
+    }
   }
 
   &__link {
-    display: block;
-    color: $title-color;
-    letter-spacing: 0.02em;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.18;
-
     @include tabmin768 {
-      // font-size: 14px;
-      // line-height: 1.14;
-
-      // padding-top: 32px;
-      // padding-bottom: 32px;
+      padding: 32px 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
     }
-
     transition: color $cubic;
-
+    color: $title-color;
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+    @include tabmax767 {
+      letter-spacing: 0.02em;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.18;
     }
   }
 
   .active {
     color: $accent-color;
-
     @include tabmin768 {
       &::after {
         position: absolute;
@@ -111,20 +130,65 @@ body {
 
 .address {
   @include tabmax767 {
-  }
-  display: flex;
-  flex-direction: column-reverse;
-  margin-bottom: 64px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
 
-  @include tabmin768 {
-    // display: flex;
-    // @extend %justalign;
+    &__item:last-child {
+      margin-bottom: 32px;
+    }
 
-    // margin-left: auto;
-    // fill: $sub-text-color;
+    &__tell {
+      color: $accent-color;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
   }
-  &__item:last-child {
-    margin-bottom: 32px;
+
+  &__icon {
+    display: none;
+    @include tabmin768 {
+      display: block;
+      margin-right: 10px;
+      transition: fill $cubic;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include deskmin1200 {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    @include tabmin768 {
+      font-size: 12px;
+      line-height: 1.17;
+      fill: currentColor;
+    }
+    display: flex;
+
+    color: $sub-text-color;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+
+    transition: color $cubic;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }
 
@@ -138,39 +202,5 @@ body {
     // &:focus {
     //   fill: $accent-color;
     // }
-  }
-}
-
-.address__icon {
-  display: none;
-  @include tabmin768 {
-    display: block;
-    margin-right: 10px;
-    transition: fill $cubic;
-  }
-}
-
-@include tabmin768 {
-  .address__item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-.address__link {
-  display: flex;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
-
-  color: $sub-text-color;
-  letter-spacing: 0.02em;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-
-  transition: color $cubic;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
   }
 }

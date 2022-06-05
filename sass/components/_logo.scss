@@ -8,7 +8,13 @@
   display: block;
   padding-top: 16px;
   padding-bottom: 15px;
+
   @include tabmin768 {
+    padding: 26px 0;
+    margin-right: 88px;
+  }
+
+  @include deskmin1200 {
     padding-top: 25px;
     padding-bottom: 24px;
   }
