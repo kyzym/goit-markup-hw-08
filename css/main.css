@@ -107,7 +107,17 @@ input {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .menu-button {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,11 +197,22 @@ input {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .nav {
+    margin-right: 84px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin-right: 305px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .site-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 84px;
   }
 }
 
@@ -244,7 +265,7 @@ input {
 @media screen and (min-width: 768px) {
   .site-nav__link.active::after {
     position: absolute;
-    bottom: -1px;
+    bottom: 0px;
     left: 0px;
     content: '';
     display: block;
@@ -252,6 +273,20 @@ input {
     height: 4px;
     background-color: currentColor;
     border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .site-nav__link.active::after {
+    bottom: -1px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -297,6 +332,12 @@ input {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .address__item:not(:last-child) {
     margin-right: 30px;
@@ -307,6 +348,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  fill: currentColor;
   color: #757575;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -316,16 +358,25 @@ input {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
+.address__link:hover, .address__link:focus {
+  color: #2196f3;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .address__link {
     font-size: 12px;
     line-height: 1.17;
-    fill: currentColor;
   }
 }
 
-.address__link:hover, .address__link:focus {
-  color: #2196f3;
+@media screen and (min-width: 1200px) {
+  .address__link {
+    line-height: 1.14;
+    padding: 32px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .logo {
@@ -350,6 +401,7 @@ input {
   .logo {
     padding-top: 25px;
     padding-bottom: 24px;
+    margin-right: 93px;
   }
 }
 
@@ -732,7 +784,7 @@ input {
   background-color: #fff;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
   .our-peoples__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -806,6 +858,24 @@ input {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .clients__item:not(:last-child) {
     margin-right: 30px;
@@ -830,23 +900,16 @@ input {
   fill: #2196f3;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
   .clients__link {
     width: 210px;
-    -ms-flex-preferred-size: calc(100% / 2 - 30px);
-        flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .clients__link {
     width: 226px;
-    -ms-flex-preferred-size: calc(100% / 2 - 30px);
-        flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
   }
 }
 

@@ -7,12 +7,17 @@
     border-bottom: 1px solid $foot-border-color;
     position: relative;
   }
+
+  @include deskmin1200 {
+    justify-content: flex-start;
+  }
 }
 
 .menu-button {
   @include tabmin768 {
     display: none;
   }
+  transition: fill $cubic;
 
   display: flex;
 
@@ -65,16 +70,22 @@
     height: 100vh;
     background-color: $hero-color;
   }
+  @include deskmin1200 {
+    // display: inline-block;
+  }
+}
+.nav {
+  @include tab768_1199 {
+    margin-right: 84px;
+  }
+  @include deskmin1200 {
+    margin-right: 305px;
+  }
 }
 
-// body {
-//   position: relative;
-// }
-
 .site-nav {
-  @include tab768_1199 {
+  @include tabmin768 {
     display: flex;
-    margin-right: 84px;
   }
 
   &__list:not(:last-child) {
@@ -113,7 +124,7 @@
       @include tabmin768 {
         &::after {
           position: absolute;
-          bottom: -1px;
+          bottom: 0px;
           left: 0px;
 
           content: '';
@@ -124,6 +135,9 @@
 
           background-color: currentColor;
           border-radius: 4px;
+          @include deskmin1200 {
+            bottom: -1px;
+          }
         }
       }
     }
@@ -131,6 +145,10 @@
 }
 
 .address {
+  @include deskmin1200 {
+    display: flex;
+  }
+
   @include tabmax767 {
     display: flex;
     flex-direction: column-reverse;
@@ -166,19 +184,17 @@
   }
 
   &__item:not(:last-child) {
+    @include tab768_1199 {
+      margin-bottom: 10px;
+    }
     @include deskmin1200 {
       margin-right: 30px;
     }
   }
 
   &__link {
-    @include tabmin768 {
-      font-size: 12px;
-      line-height: 1.17;
-      fill: currentColor;
-    }
     display: flex;
-
+    fill: currentColor;
     color: $sub-text-color;
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -191,18 +207,16 @@
     &:focus {
       color: $accent-color;
     }
-  }
-}
 
-.address__link {
-  @include tabmin768 {
-    // @extend %justalign;
+    @include tab768_1199 {
+      font-size: 12px;
+      line-height: 1.17;
+    }
 
-    // transition: color $cubic;
-
-    // &:hover,
-    // &:focus {
-    //   fill: $accent-color;
-    // }
+    @include deskmin1200 {
+      line-height: 1.14;
+      padding: 32px 0;
+      align-items: center;
+    }
   }
 }

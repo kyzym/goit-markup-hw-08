@@ -5,6 +5,19 @@
     margin-top: calc(-1 * 30px);
     margin-left: calc(-1 * 30px);
   }
+
+  &__item {
+    @include tab768_1199 {
+      flex-basis: calc(100% / 3 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    @include tabmax767 {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
 }
 @include deskmin1200 {
   .clients__item:not(:last-child) {
@@ -28,20 +41,12 @@
     fill: $accent-color;
   }
 
-  // width: 170px;
-  @include tel480_767 {
+  @include tabmax767 {
     width: 210px;
-
-    flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
+    width: 100%;
   }
-
   @include tab768_1199 {
     width: 226px;
-    flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
   }
   @include deskmin1200 {
     width: 170px;

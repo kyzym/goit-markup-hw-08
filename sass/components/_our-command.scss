@@ -20,7 +20,7 @@
   border-radius: 0px 0px 4px 4px;
   background-color: $hero-color;
 
-  @include tel480_767 {
+  @include tabmax767 {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
