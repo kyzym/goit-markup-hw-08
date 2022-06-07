@@ -3,10 +3,8 @@
   align-items: center;
   justify-content: space-between;
 
-  @include tabmin768 {
-    border-bottom: 1px solid $foot-border-color;
-    position: relative;
-  }
+  border-bottom: 1px solid $foot-border-color;
+  position: relative;
 
   @include deskmin1200 {
     justify-content: flex-start;

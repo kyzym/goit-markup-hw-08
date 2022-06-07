@@ -98,13 +98,8 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@media screen and (min-width: 768px) {
-  .header-container {
-    border-bottom: 1px solid #ececec;
-    position: relative;
-  }
+  border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1173,10 +1168,10 @@ input {
   .portfolio__item:not(:last-child) {
     margin-right: 8px;
   }
-  .portfolio__item:nth-child(3n) {
+  .portfolio__item:nth-child(-4n) {
     margin-right: 0px;
   }
-  .portfolio__item:nth-child(1) {
+  .portfolio__item:nth-child(2n + 1) {
     margin-bottom: 15px;
   }
 }
