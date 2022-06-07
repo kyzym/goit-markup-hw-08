@@ -122,7 +122,7 @@ input {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   border: none;
   background-color: transparent;
   z-index: 100;
@@ -170,6 +170,7 @@ input {
 
 @media screen and (max-width: 767.98px) {
   .menu-container {
+    z-index: 50;
     display: none;
     padding: 48px;
     position: absolute;
@@ -430,6 +431,8 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -520,6 +523,7 @@ input {
 }
 
 .backdrop {
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
@@ -544,7 +548,7 @@ input {
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -553,6 +557,8 @@ input {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: calc(100vh - 1px);
+  overflow-y: auto;
   opacity: 1;
   max-width: 450px;
   width: 100%;
@@ -564,7 +570,6 @@ input {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 100%;
     max-width: 528px;
   }
 }
@@ -1028,23 +1033,42 @@ input {
 }
 
 .user-form__textarea::-webkit-input-placeholder {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.14;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .user-form__textarea:-ms-input-placeholder {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.14;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .user-form__textarea::-ms-input-placeholder {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.14;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .user-form__textarea::placeholder {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.14;
   color: rgba(117, 117, 117, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  .user-form__textarea::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .user-form__textarea:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .user-form__textarea::-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .user-form__textarea::placeholder {
+    font-size: 12px;
+  }
 }
 
 .user-form__textarea:hover, .user-form__textarea:focus {
@@ -1145,7 +1169,7 @@ input {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
   .portfolio__item:not(:last-child) {
     margin-right: 8px;
   }
@@ -1178,6 +1202,7 @@ input {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
+  letter-spacing: 0.03em;
   cursor: pointer;
   text-align: center;
   border: none;
