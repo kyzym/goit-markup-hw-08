@@ -182,15 +182,10 @@
       transition: fill $cubic;
     }
   }
-  &__item:last-child {
-    @include tab768_1199 {
-      padding-bottom: 21px;
-    }
-  }
+
   &__item:not(:last-child) {
     @include tab768_1199 {
       margin-bottom: 10px;
-      padding-top: 21px;
     }
     @include deskmin1200 {
       margin-right: 30px;
@@ -216,6 +211,12 @@
     @include tab768_1199 {
       font-size: 12px;
       line-height: 1.17;
+      &--top {
+        padding-top: 21px;
+      }
+      &--bottom {
+        padding-bottom: 21px;
+      }
     }
 
     @include deskmin1200 {
