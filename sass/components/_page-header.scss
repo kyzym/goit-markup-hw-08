@@ -124,7 +124,7 @@
       @include tabmin768 {
         &::after {
           position: absolute;
-          bottom: 0px;
+          bottom: -2px;
           left: 0px;
 
           content: '';
@@ -182,10 +182,15 @@
       transition: fill $cubic;
     }
   }
-
+  &__item:last-child {
+    @include tab768_1199 {
+      padding-bottom: 21px;
+    }
+  }
   &__item:not(:last-child) {
     @include tab768_1199 {
       margin-bottom: 10px;
+      padding-top: 21px;
     }
     @include deskmin1200 {
       margin-right: 30px;

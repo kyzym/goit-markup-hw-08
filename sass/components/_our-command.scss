@@ -38,20 +38,20 @@
 }
 
 .command-member {
+  & .social-networks {
+    margin-left: auto;
+    margin-right: auto;
+  }
   @include tabmax767 {
-    padding-left: 122px;
-    padding-right: 122px;
     padding-top: 30px;
     padding-bottom: 24px;
   }
   @include tab768_1199 {
-    padding-left: 74px;
-    padding-right: 74px;
     padding-top: 30px;
     padding-bottom: 24px;
   }
   @include deskmin1200 {
-    padding: 30px 32px;
+    padding: 30px 0;
   }
 }
 

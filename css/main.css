@@ -265,7 +265,7 @@ input {
 @media screen and (min-width: 768px) {
   .site-nav__link.active::after {
     position: absolute;
-    bottom: 0px;
+    bottom: -2px;
     left: 0px;
     content: '';
     display: block;
@@ -333,8 +333,15 @@ input {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .address__item:last-child {
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .address__item:not(:last-child) {
     margin-bottom: 10px;
+    padding-top: 21px;
   }
 }
 
@@ -805,10 +812,13 @@ input {
   }
 }
 
+.command-member .social-networks {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 767.98px) {
   .command-member {
-    padding-left: 122px;
-    padding-right: 122px;
     padding-top: 30px;
     padding-bottom: 24px;
   }
@@ -816,8 +826,6 @@ input {
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .command-member {
-    padding-left: 74px;
-    padding-right: 74px;
     padding-top: 30px;
     padding-bottom: 24px;
   }
@@ -825,7 +833,7 @@ input {
 
 @media screen and (min-width: 1200px) {
   .command-member {
-    padding: 30px 32px;
+    padding: 30px 0;
   }
 }
 
