@@ -53,7 +53,7 @@
           <div class="mobile-adress">
             <ul class="address">
               <li class="address__item">
-                <a class="address__link" href="mailto:info@devstudio.com"
+                <a class="address__link address__link--top" href="mailto:info@devstudio.com"
                   ><svg class="address__icon--envelope" width="16" height="12">
                     <use href="./images/icons.svg#icon-envelope"></use></svg
                   ><span class="address__text">info@devstudio.com</span></a
@@ -61,7 +61,7 @@
               </li>
 
               <li class="address__item">
-                <a class="address__link" href="tell:380961111111"
+                <a class="address__link address__link--bottom" href="tell:380961111111"
                   ><svg class="address__icon--tell" width="10" height="16">
                     <use href="./images/icons.svg#icon-smartphone"></use></svg
                   ><span class="address__tell">+38 096 111 11 11</span></a
@@ -122,13 +122,43 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port1.jpg"
-                    alt="3 фото разных людей на экране ноутбука"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x.webp 1x, ./images/img3-370-2x.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x.webp 1x, ./images/img3-354-2x.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x.webp 1x, ./images/img3-450-2x.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x.jpg 1x, ./images/img3-370-2x.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x.jpg 1x, ./images/img3-354-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x.jpg 1x, ./images/img3-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/port1.jpg"
+                      alt="3 фото разных людей на экране ноутбука"
+                      class="port-img"
+                    />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -145,13 +175,43 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port2.jpg"
-                    alt="баскетболисты борятся за мяч"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-1.webp 1x, ./images/img3-370-2x-1.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-1.webp 1x, ./images/img3-354-2x-1.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-1.webp 1x, ./images/img3-450-2x-1.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-1.jpg 1x, ./images/img3-370-2x-1.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-1.jpg 1x, ./images/img3-354-2x-1.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-1.jpg 1x, ./images/img3-450-2x-1.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/port2.jpg"
+                      alt="баскетболисты борятся за мяч"
+                      class="port-img"
+                    />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -168,13 +228,43 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port3.jpg"
-                    alt="рыба на логотипе ресторана"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-2.webp 1x, ./images/img3-370-2x-2.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-2.webp 1x, ./images/img3-354-2x-2.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-2.webp 1x, ./images/img3-450-2x-2.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-2.jpg 1x, ./images/img3-370-2x-2.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-2.jpg 1x, ./images/img3-354-2x-2.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-2.jpg 1x, ./images/img3-450-2x-2.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/port3.jpg"
+                      alt="рыба на логотипе ресторана"
+                      class="port-img"
+                    />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -191,13 +281,39 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port4.jpg"
-                    alt="наушники"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-3.webp 1x, ./images/img3-370-2x-3.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-3.webp 1x, ./images/img3-354-2x-3.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-3.webp 1x, ./images/img3-450-2x-3.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-3.jpg 1x, ./images/img3-370-2x-3.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-3.jpg 1x, ./images/img3-354-2x-3.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-3.jpg 1x, ./images/img3-450-2x-3.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/port4.jpg" alt="наушники" class="port-img" />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -214,13 +330,39 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port5.jpg"
-                    alt="2 коробки"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-4.webp 1x, ./images/img3-370-2x-4.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-4.webp 1x, ./images/img3-354-2x-4.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-4.webp 1x, ./images/img3-450-2x-4.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-4.jpg 1x, ./images/img3-370-2x-4.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-4.jpg 1x, ./images/img3-354-2x-4.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-4.jpg 1x, ./images/img3-450-2x-4.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/port5.jpg" alt="2 коробки" class="port-img" />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -237,13 +379,39 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port6.jpg"
-                    alt="экран компьютера"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-5.webp 1x, ./images/img3-370-2x-5.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-5.webp 1x, ./images/img3-354-2x-5.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-5.webp 1x, ./images/img3-450-2x-5.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-5.jpg 1x, ./images/img3-370-2x-5.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-5.jpg 1x, ./images/img3-354-2x-5.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-5.jpg 1x, ./images/img3-450-2x-5.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/port6.jpg" alt="экран компьютера" class="port-img" />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -260,13 +428,43 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port7.jpg"
-                    alt="открытая книга ограниченной серии"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-6.webp 1x, ./images/img3-370-2x-6.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-6.webp 1x, ./images/img3-354-2x-6.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-6.webp 1x, ./images/img3-450-2x-6.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-6.jpg 1x, ./images/img3-370-2x-6.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-6.jpg 1x, ./images/img3-354-2x-6.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-6.jpg 1x, ./images/img3-450-2x-6.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/port7.jpg"
+                      alt="открытая книга ограниченной серии"
+                      class="port-img"
+                    />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -283,13 +481,43 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port8.jpg"
-                    alt="бирка одежды с надписью ЛАБ"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-7.webp 1x, ./images/img3-370-2x-7.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-7.webp 1x, ./images/img3-354-2x-7.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-7.webp 1x, ./images/img3-450-2x-7.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-7.jpg 1x, ./images/img3-370-2x-7.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-7.jpg 1x, ./images/img3-354-2x-7.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-7.jpg 1x, ./images/img3-450-2x-7.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/port8.jpg"
+                      alt="бирка одежды с надписью ЛАБ"
+                      class="port-img"
+                    />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -306,13 +534,44 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__figure">
-                  <img
-                    src="./images/port9.jpg"
-                    alt="Человек печатает на ноутбуке"
-                    class="port-img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img3-370-1x-8.webp 1x, ./images/img3-370-2x-8.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-8.webp 1x, ./images/img3-354-2x-8.webp 2x"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-8.webp 1x, ./images/img3-450-2x-8.webp 2x"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/img3-370-1x-8.jpg 1x, ./images/img3-370-2x-8.jpg 2x"
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img3-354-1x-8.jpg 1x, ./images/img3-354-2x-8.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img3-450-1x-8.jpg 1x, ./images/img3-450-2x-8.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/port9.jpg"
+                      alt="Человек печатает на ноутбуке"
+                      class="port-img"
+                      8
+                    />
+                  </picture>
+
                   <p class="card-set__content">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
