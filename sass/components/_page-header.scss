@@ -1,3 +1,7 @@
+.site-nav__underline {
+  position: relative;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -170,12 +174,23 @@
     }
   }
 
-  &__icon {
+  &__icon--envelope,
+  &__icon--tell {
     display: none;
     @include tabmin768 {
       display: block;
       margin-right: 10px;
       transition: fill $cubic;
+    }
+  }
+  @include tab768_1199 {
+    &__icon--envelope {
+      width: 14px;
+      height: 10px;
+    }
+    &__icon--tell {
+      width: 10px;
+      height: 14px;
     }
   }
 
@@ -190,6 +205,7 @@
 
   &__link {
     display: flex;
+    align-items: center;
     fill: currentColor;
     color: $sub-text-color;
     letter-spacing: 0.02em;

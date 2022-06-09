@@ -54,7 +54,7 @@
             <ul class="address">
               <li class="address__item">
                 <a class="address__link address__link--top" href="mailto:info@devstudio.com"
-                  ><svg class="address__icon address__tell" width="16" height="12">
+                  ><svg class="address__icon--envelope" width="16" height="12">
                     <use href="./images/icons.svg#icon-envelope"></use></svg
                   ><span class="address__text">info@devstudio.com</span></a
                 >
@@ -62,7 +62,7 @@
 
               <li class="address__item">
                 <a class="address__link address__link--bottom" href="tell:380961111111"
-                  ><svg class="address__icon" width="10" height="16">
+                  ><svg class="address__icon--tell" width="10" height="16">
                     <use href="./images/icons.svg#icon-smartphone"></use></svg
                   ><span class="address__tell">+38 096 111 11 11</span></a
                 >
@@ -169,39 +169,55 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="skills">
             <li class="skills__item">
-              <div class="skills__thumb">
-                <img
-                  src="./images/box1.jpg"
-                  alt="Набирает код на клавиатуре"
-                  width="370"
-                  height="294"
+              <picture>
+                <source
+                  srcset="./images/img1-370-1x.webp 1x, ./images/img1-370-2x.webp 2x"
+                  sizes="(min-width: 1200px) 370px"
+                  type="image/webp"
                 />
-                <div class="skills__content"><p>десктопные приложения</p></div>
-              </div>
+
+                <img
+                  srcset="./images/img1-370-1x.jpg, ./images/img1-370-2x.jpg 2x"
+                  alt="Набирает код на клавиатуре"
+                  width="370px"
+                  height="294px"
+                />
+              </picture>
+              <div class="skills__content"><p>десктопные приложения</p></div>
             </li>
 
             <li class="skills__item">
-              <div class="skills__thumb">
+              <picture>
+                <source
+                  srcset="./images/img1-370-1x-1.webp 1x, ./images/img1-370-2x-1.webp 2x"
+                  sizes="(min-width: 1200px) 370px"
+                  type="image/webp"
+                />
                 <img
-                  src="./images/box2.jpg"
+                  srcset="./images/img1-370-1x-1.jpg, ./images/img1-370-2x-1.jpg 2x"
                   alt="держит телефон перед монитором с изображением нескольких телефонов"
                   width="370"
                   height="294"
                 />
                 <div class="skills__content"><p>мобильные приложения</p></div>
-              </div>
+              </picture>
             </li>
 
             <li class="skills__item">
-              <div class="skills__thumb">
+              <picture>
+                <source
+                  srcset="./images/img1-370-1x-2.webp 1x, ./images/img1-370-2x-2.webp 2x"
+                  sizes="(min-width: 1200px) 370px"
+                  type="image/webp"
+                />
                 <img
-                  src="./images/box3.jpg"
+                  srcset="./images/img1-370-1x-2.jpg, ./images/img1-370-2x-2.jpg 2x"
                   alt="планшет с таблицей цветов на нем"
                   width="370"
                   height="294"
                 />
                 <div class="skills__content"><p>дизайнерские решения</p></div>
-              </div>
+              </picture>
             </li>
           </ul>
         </div>
@@ -213,7 +229,38 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="our-peoples">
             <li class="our-peoples__item">
-              <img src="./images/ihor.jpg" alt="дизайнер продукта" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/img2-270-1x.webp 1x, ./images/img2-270-2x.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x.webp 1x, ./images/img2-354-2x.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x.webp 1x, ./images/img2-450-2x.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/img2-270-1x.jpg 1x, ./images/img2-270-2x.jpg 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x.jpg 1x, ./images/img2-354-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x.jpg 1x, ./images/img2-450-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/img2-270-1x.jpg" alt="дизайнер продукта" />
+              </picture>
 
               <div class="command-member">
                 <h3 class="command-member__name">Игорь Демьяненко</h3>
@@ -254,7 +301,39 @@
             </li>
 
             <li class="our-peoples__item">
-              <img src="./images/olha.jpg" alt="фронтенд-разработчик" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/img2-270-1x-1.webp 1x, ./images/img2-270-2x-1.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x-1.webp 1x, ./images/img2-354-2x-1.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x-1.webp 1x, ./images/img2-450-2x-1.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/img2-270-1x-1.jpg 1x, ./images/img2-270-2x-1.jpg 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x-1.jpg 1x, ./images/img2-354-2x-1.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x-1.jpg 1x, ./images/img2-450-2x-1.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/olha.jpg" alt="фронтенд-разработчик" width="270" height="260" />
+              </picture>
+
               <div class="command-member">
                 <h3 class="command-member__name">Ольга Репина</h3>
                 <p class="command-member__position">Frontend Developer</p>
@@ -291,7 +370,39 @@
             </li>
 
             <li class="our-peoples__item">
-              <img src="./images/nick.jpg" alt="маркетинг" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/img2-270-1x-2.webp 1x, ./images/img2-270-2x-2.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x-2.webp 1x, ./images/img2-354-2x-2.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x-2.webp 1x, ./images/img2-450-2x-2.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/img2-270-1x-2.jpg 1x, ./images/img2-270-2x-2.jpg 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x-2.jpg 1x, ./images/img2-354-2x-2.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x-2.jpg 1x, ./images/img2-450-2x-2.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/nick.jpg" alt="маркетинг" width="270" height="260" />
+              </picture>
+
               <div class="command-member">
                 <h3 class="command-member__name">Николай Тарасов</h3>
                 <p class="command-member__position">Marketing</p>
@@ -328,12 +439,44 @@
             </li>
 
             <li class="our-peoples__item">
-              <img
-                src="./images/michel.jpg"
-                alt="дизайнер пользовательского интерфейса"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/img2-270-1x-3.webp 1x, ./images/img2-270-2x-3.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x-3.webp 1x, ./images/img2-354-2x-3.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x-3.webp 1x, ./images/img2-450-2x-3.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/img2-270-1x-3.jpg 1x, ./images/img2-270-2x-3.jpg 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/img2-354-1x-3.jpg 1x, ./images/img2-354-2x-3.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/img2-450-1x-3.jpg 1x, ./images/img2-450-2x-3.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/michel.jpg"
+                  alt="дизайнер пользовательского интерфейса"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+
               <div class="command-member">
                 <h3 class="command-member__name">Михаил Ермаков</h3>
                 <p class="command-member__position">UI Designer</p>
