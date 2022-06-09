@@ -2,32 +2,66 @@
   background-color: $bg-color;
   padding-top: 60px;
   padding-bottom: 60px;
-}
 
-.page-footer__container {
-  @include tab768_1199 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  &__container {
+    @include tab768_1199 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include deskmin1200 {
+      display: flex;
+      justify-content: space-between;
+    }
   }
-  @include deskmin1200 {
-    display: flex;
-    justify-content: space-between;
+
+  &__adr-container {
+    @include flex_col_cen margin-bottom: 60px;
+
+    @include deskmin1200 {
+      align-items: baseline;
+      margin-bottom: 0;
+    }
   }
-}
 
-.page-footer__adr-container {
-  @include flex_col_cen margin-bottom: 60px;
-
-  @include deskmin1200 {
-    align-items: baseline;
-    margin-bottom: 0;
+  &__contacts {
+    @include flex_col_cen @include deskmin1200 {
+      align-items: baseline;
+    }
   }
-}
 
-.page-footer__contacts {
-  @include flex_col_cen @include deskmin1200 {
-    align-items: baseline;
+  &__adr {
+    color: $hero-color;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    margin-bottom: 8px;
+
+    @include deskmin1200 {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 8px;
+
+    @include deskmin1200 {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    color: $foot-sub-color;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    transition: color $cubic;
+    display: block;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }
 
@@ -52,43 +86,14 @@
   font-size: 24px;
   line-height: 1.17;
 
+  @include tab768_1199 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @include deskmin1200 {
     font-size: 26px;
     line-height: 1.19;
-  }
-}
-
-.page-footer__adr {
-  color: $hero-color;
-  font-size: 14px;
-  line-height: 1.71;
-  font-style: normal;
-  margin-bottom: 8px;
-
-  @include deskmin1200 {
-    margin-bottom: 9px;
-  }
-}
-
-.page-footer__item {
-  margin-bottom: 8px;
-
-  @include deskmin1200 {
-    margin-bottom: 9px;
-  }
-}
-
-.page-footer__link {
-  color: $foot-sub-color;
-  font-size: 14px;
-  line-height: 1.71;
-  font-style: normal;
-  transition: color $cubic;
-  display: block;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
   }
 }
 

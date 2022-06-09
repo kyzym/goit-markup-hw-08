@@ -12,27 +12,27 @@
   @include deskmin1200 {
     display: flex;
   }
-}
 
-.our-peoples__item {
-  text-align: center;
-  box-shadow: $card-people-shadow;
-  border-radius: 0px 0px 4px 4px;
-  background-color: $hero-color;
+  &__item {
+    text-align: center;
+    box-shadow: $card-people-shadow;
+    border-radius: 0px 0px 4px 4px;
+    background-color: $hero-color;
 
-  @include tabmax767 {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    @include tabmax767 {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
-  }
-  @include tab768_1199 {
-    flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
-  }
-  @include deskmin1200 {
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include tab768_1199 {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    @include deskmin1200 {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 }
@@ -53,19 +53,19 @@
   @include deskmin1200 {
     padding: 30px 0;
   }
-}
 
-.command-member__name {
-  color: $title-color;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  &__name {
+    color: $title-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
 
-  margin-bottom: 10px;
-}
+    margin-bottom: 10px;
+  }
 
-.command-member__position {
-  font-size: 16px;
-  line-height: 1.19;
-  margin-bottom: 16px;
+  &__position {
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 16px;
+  }
 }
